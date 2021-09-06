@@ -1,0 +1,53 @@
+@import "libs";
+@import "variables";
+
+body {
+  font-family: 'Asap', sans-serif;
+}
+
+header {
+  padding: 31px 0;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  font-size: 16px;
+  line-height: 16px;
+  color: $main_color;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 8px 19px;
+  & {
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background-color: #878787;
+      margin-top: 8px;
+      opacity: 0;
+      transition: .3s;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+}
+.navbar-light .navbar-nav .active>.nav-link {
+  color: $main_color;
+  &:after {
+    width: 100%;
+    opacity: 1;
+
+  }
+}
