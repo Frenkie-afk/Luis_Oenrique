@@ -4,8 +4,12 @@
 body {
   font-family: 'Asap', sans-serif;
 }
-
+img {
+  width: 100%;
+}
 header {
+  position: absolute;
+  width: 100%;
   padding: 31px 0;
 }
 
@@ -49,5 +53,77 @@ header {
     width: 100%;
     opacity: 1;
 
+  }
+}
+
+.first_screen {
+  background: url("../img/bg.jpg") center center/cover no-repeat;
+  padding: 101px 0 5px;
+  h1 {
+    font-size: 88px;
+    line-height: 90px;
+    color: $main_color;
+    margin-bottom: 0;
+    font-weight: $font_bold;
+    margin-inline-start: -4px;
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 22px;
+    color: #909090;
+    margin-bottom: 28px;
+  }
+}
+
+.btn {
+  position: relative;
+  border: 1px solid $main_color;
+  border-radius: 0;
+  font-size: 16px;
+  color: $main_color;
+  line-height: 48px;
+  padding: 0 15px;
+  min-width: 160px;
+  margin-right: 20px;
+  font-weight: $font_bold;
+  overflow: hidden;
+  z-index: 1;
+  transition: .3s;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white_color;
+    transition: 0.25s;
+  }
+  &:hover {
+    color: $main_color;
+    border: 1px solid transparent;
+    box-shadow: 0 0.5em 1em -0.4em rgba(0, 0, 0, 0.32);
+    &:after {
+      top: auto;
+      height: 100%;
+      bottom: 0;
+    }
+  }
+}
+
+.btn {
+  &.white {
+    background-color: $white_color;
+    border: 1px solid $white_color;
+    box-shadow: 0 0.5em 1em -0.4em rgba(0, 0, 0, 0.32);
+    &:after {
+      background-color: transparent;
+    }
+    &:hover {
+      border: 1px solid $main_color;
+      background-color: transparent;
+      box-shadow: none;
+    }
   }
 }
