@@ -1,16 +1,21 @@
 @import "libs";
 @import "variables";
 
+
+
 body {
   font-family: 'Asap', sans-serif;
 }
 img {
   width: 100%;
+  display: block;
 }
+
 header {
   position: absolute;
   width: 100%;
   padding: 31px 0;
+  z-index: 1;
 }
 
 .navbar {
@@ -125,5 +130,71 @@ header {
       background-color: transparent;
       box-shadow: none;
     }
+  }
+}
+
+.about_me {
+  padding: 109px 0 120px;
+  p {
+    font-size: 16px;
+    line-height: 25px;
+    color: $main_color;
+    margin-bottom: 36px;
+    font-weight: $font_medium;
+  }
+  .btn {
+    min-width: 245px;
+    margin-right: 0;
+  }
+  .about_picture {
+    height: auto;
+    max-width: 570px;
+    background-color: $grey_color;
+    overflow: hidden;
+  }
+  .title {
+    &:before {
+      margin: 0  0 15px;
+    }
+  }
+}
+
+.title {
+  font-size: 46px;
+  line-height: 46px;
+  color: $main_color;
+  font-weight: $font_bold;
+  margin-bottom: 0;
+  letter-spacing: 5px;
+  opacity: 80%;
+  &:before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 60px;
+    background-color: $main_color;
+    opacity: 80%;
+    margin: 0 auto 15px;
+  }
+}
+
+.services {
+  background-color: $grey_color;
+  padding: 119px 0 113px;
+  img {
+    width: unset;
+  }
+  .title {
+    margin-bottom: 71px;
+  }
+  .feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 81px;
+    margin-bottom: 10px;
+  }
+  .feature {
+    //margin-bottom: 82px;
   }
 }
