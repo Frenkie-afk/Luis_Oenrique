@@ -6,12 +6,10 @@ $(document).ready(function(){
         autoHeight: true,
         nav:true,
         navText: [ '', ' ' ],
-        // autoplay:false,
-        // autoplayTimeout:3500,
-        // autoplayHoverPause:true,
-        // autoplaySpeed:1000,
         navSpeed: 1000,
         dotsSpeed: 1000,
+        touchDrag: false,
+        mouseDrag: false,
         responsive:{
             0:{
                 items:1,
@@ -26,13 +24,14 @@ $(document).ready(function(){
             768: {
                 items:1,
                 dots:true,
-                nav: true
+                nav: false
             },
             1000:{
-                items:1
+                items:1,
+                nav: false
             }
         },
-        animateOut: 'fadeOut'
+        animateOut: "fadeOut" ,
     });
 
 });

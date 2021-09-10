@@ -28,6 +28,9 @@ header {
 .navbar-brand {
   padding: 0;
 }
+.navbar-brand:hover img {
+  opacity: 60%;
+}
 
 .navbar-light .navbar-nav .nav-link {
   font-size: 16px;
@@ -127,9 +130,8 @@ header {
   background-color: transparent;
 }
 .btn.white:hover {
-  border: 1px solid #4d4d4d;
-  background-color: transparent;
-  box-shadow: none;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.67);
 }
 
 .about_me {
@@ -192,6 +194,13 @@ header {
   height: 81px;
   margin-bottom: 10px;
 }
+.services h4 {
+  font-size: 24px;
+  line-height: 24px;
+  color: #4d4d4d;
+  font-weight: 700;
+}
+
 .skills {
   padding: 120px 0;
 }
@@ -218,9 +227,147 @@ header {
   min-width: 190px;
 }
 
-.testimonials .testimonials_agent {
-  width: 159px;
-  height: 159px;
+.testimonials {
+  padding: 120px 0;
+}
+.testimonials .owl-carousel {
+  padding: 100px 100px;
+  border: 1px solid #212121;
+}
+.testimonials .owl-carousel h3 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #212121;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.testimonials .owl-carousel h4 {
+  font-size: 12px;
+  line-height: 12px;
+  color: #212121;
+  font-style: italic;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.testimonials .owl-carousel p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #212121;
+  opacity: 60%;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.testimonials .owl-carousel .owl-dots {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 38px;
+  left: 0;
+  text-align: center;
+}
+.testimonials .owl-carousel .owl-dots .owl-dot {
+  width: 13px;
+  height: 13px;
+  border: 1px solid #212121;
+  margin-right: 4px;
+  transition: 0.3s;
+}
+.testimonials .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #212121;
+}
+
+.total {
+  padding-bottom: 120px;
+}
+.total .services {
+  padding: 53px 0 65px;
+}
+.total .services .feature-icon {
+  height: 100px;
+  align-items: end;
+  margin-bottom: 25px;
+}
+.total .services span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.total .services h4 {
+  font-size: 22px;
+  line-height: 22px;
+  color: #212121;
+  font-weight: 500;
+}
+
+footer {
+  padding: 120px 0 30px;
+  background: url("../img/footer/footer_bg.jpg") center center/cover no-repeat;
+}
+footer .title {
+  color: white;
+  opacity: 100%;
+}
+footer .title:before {
+  background-color: #c1c1c1;
+}
+footer .form-group {
+  margin-bottom: 2rem;
+}
+footer .form-control {
+  height: 57px;
+  border-radius: 0;
+  color: #212121;
+  font-size: 16px;
+  font-weight: 500;
+}
+footer ::placeholder {
+  color: #212121;
+}
+footer textarea.form-control {
+  height: 207px;
+  resize: none;
+}
+footer .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+footer .btn img {
+  width: unset;
+}
+footer .btn span {
+  margin-right: 7px;
+  line-height: 15px;
+}
+footer .copyright {
+  margin-top: 58px;
+  border-top: 1px solid white;
+  padding-top: 26px;
+}
+footer .copyright span {
+  color: white;
+}
+footer .socials a {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-color: white;
+  text-decoration: none;
+  color: #4d4d4d;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 26px;
+  transition: 0.3s;
+}
+footer .socials a:first-child {
+  margin: 0 5px 0 0;
+}
+footer .socials a:hover {
+  background-color: #0084b4;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
