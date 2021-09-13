@@ -1,6 +1,6 @@
 @import "libs";
 @import "variables";
-
+@import "mixins";
 
 
 body {
@@ -16,7 +16,12 @@ header {
   position: absolute;
   width: 100%;
   padding: 31px 0;
-  z-index: 1;
+  z-index: 2;
+  @include max-screen(991px) {
+    padding: 15px 0;
+    background-color: $white_color;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+  }
 }
 
 .navbar {
@@ -31,33 +36,63 @@ header {
     }
   }
 }
-
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
+.navbar-nav {
+  li {
+    &:last-child {
+      @include max-screen(991px) {
+        border-bottom: none;
+      }
+      .nav-link {
+        padding: 8px 0 0 19px;
+        @include max-screen(991px) {
+          padding: 15px 19px;
+        }
+      }
+    }
+  }
+}
+.nav-item {
+  @include max-screen(991px) {
+    border-bottom: 1px solid #eee;
+  }
+}
 .navbar-light .navbar-nav .nav-link{
   font-size: 16px;
   line-height: 16px;
   color: $main_color;
   font-weight: $font_medium;
+  @include max-screen(991px) {
+    text-align: center;
+  }
 }
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 8px 19px;
-  & {
-    &:after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 0;
-      background-color: #878787;
-      margin-top: 8px;
-      opacity: 0;
-      transition: .3s;
-    }
-    &:hover {
-      &:after {
-        opacity: 1;
-        width: 100%;
-      }
+  @include max-screen(991px) {
+    padding: 15px 19px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #878787;
+    margin-top: 8px;
+    opacity: 0;
+    transition: .3s;
+    @include max-screen(991px) {
+      display: none;
     }
   }
+  &:hover {
+    &:after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
 }
 .navbar-light .navbar-nav .active>.nav-link {
   color: $main_color;
@@ -345,10 +380,22 @@ footer {
       width: unset;
     }
     span {
+      position: relative;
       margin-right: 7px;
       line-height: 15px;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: url("../img/footer/send-button.png") center center/cover no-repeat;
+        width: 15px;
+        height: 13px;
+        right: -22px;
+        top: 1px;
+      }
     }
   }
+
   .copyright {
     margin-top: 58px;
     border-top: 1px solid $white_color;
