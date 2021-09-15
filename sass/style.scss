@@ -113,12 +113,35 @@ header {
     margin-bottom: 0;
     font-weight: $font_bold;
     margin-inline-start: -4px;
+    @include max-screen(768px) {
+      font-size: 80px;
+      line-height: 80px;
+      margin-bottom: 20px;
+    }
+    @include max-screen(425px) {
+      font-size: 75px;
+      line-height: 75px;
+      margin-bottom: 20px;
+    }
+    @include max-screen(320px) {
+      font-size: 70px;
+      line-height: 70px;
+    }
   }
   h2 {
     font-size: 22px;
     line-height: 22px;
     color: #909090;
     margin-bottom: 28px;
+    @include max-screen(768px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .btn {
+    @include max-screen(425px) {
+        margin-bottom: 20px;
+    }
   }
 }
 
@@ -136,6 +159,17 @@ header {
   overflow: hidden;
   z-index: 1;
   transition: .3s;
+  @include max-screen(768px) {
+    margin-right: 6px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  @include max-screen(425px) {
+    min-width: unset;
+    width: 100%;
+    margin-right: 0;
+  }
   &:after {
     position: absolute;
     content: "";
@@ -177,6 +211,9 @@ header {
 
 .about_me {
   padding: 120px 0;
+  @include max-screen(768px) {
+    padding: 65px 0;
+  }
   p {
     font-size: 16px;
     line-height: 25px;
@@ -219,11 +256,22 @@ header {
     opacity: 80%;
     margin: 0 auto 15px;
   }
+  @include max-screen(425px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  @include max-screen(320px) {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 .services {
   background-color: $grey_color;
   padding: 120px 0;
+  @include max-screen(768px) {
+    padding: 65px 0;
+  }
   img {
     width: unset;
   }
@@ -244,11 +292,17 @@ header {
 
 .skills {
   padding: 120px 0 ;
+  @include max-screen(768px) {
+    padding: 65px 0;
+  }
 }
 
 .portfolio {
   padding: 120px 0;
   background-color: $grey_color;
+  @include max-screen(768px) {
+    padding: 65px 0;
+  }
   .card {
     border: none;
     border-radius: 0;
@@ -272,15 +326,25 @@ header {
 
 .testimonials {
   padding: 120px 0;
+  @include max-screen(768px) {
+    padding: 65px 0;
+  }
   .owl-carousel {
     padding: 100px 100px;
     border: 1px solid #212121;
+    @include max-screen(425px) {
+      padding: 60px 50px;
+    }
     h3 {
       font-size: 30px;
       line-height: 30px;
       color: #212121;
       margin-bottom: 0;
       font-weight: $font_bold;
+      @include max-screen(768px) {
+        font-size: 28px;
+        line-height: 28px;
+      }
     }
     h4 {
       font-size: 12px;
@@ -289,6 +353,9 @@ header {
       font-style: italic;
       margin-bottom: 15px;
       font-weight: $font_medium;
+      @include max-screen(768px) {
+        margin-bottom: 10px;
+      }
     }
     p {
       font-size: 16px;
@@ -297,6 +364,10 @@ header {
       opacity: 60%;
       text-transform: uppercase;
       margin-bottom: 0;
+      @include max-screen(768px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
     .owl-dots {
       display: block;
@@ -321,6 +392,9 @@ header {
 
 .total {
   padding-bottom: 120px;
+  @include max-screen(768px) {
+    padding-bottom: 65px;
+  }
   .services {
     padding: 53px  0 65px;
     .feature-icon {
@@ -347,6 +421,9 @@ header {
 footer {
   padding: 120px 0 30px;
   background: url("../img/footer/footer_bg.jpg") center center/cover no-repeat;
+  @include max-screen(768px) {
+    padding: 65px 0 30px;
+  }
   .title {
     color: $white_color;
     opacity: 100%;
@@ -416,6 +493,11 @@ footer {
       margin: 0 5px;
       line-height: 26px;
       transition: .3s;
+      @include max-screen(768px) {
+        width: 25px;
+        height: 25px;
+        margin: 0 3px;
+      }
       &:first-child {
         margin: 0 5px 0 0;
       }

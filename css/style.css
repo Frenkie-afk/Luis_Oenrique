@@ -123,11 +123,42 @@ header {
   font-weight: 700;
   margin-inline-start: -4px;
 }
+@media screen and (max-width: 768px) {
+  .first_screen h1 {
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .first_screen h1 {
+    font-size: 75px;
+    line-height: 75px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .first_screen h1 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
 .first_screen h2 {
   font-size: 22px;
   line-height: 22px;
   color: #909090;
   margin-bottom: 28px;
+}
+@media screen and (max-width: 768px) {
+  .first_screen h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .first_screen .btn {
+    margin-bottom: 20px;
+  }
 }
 
 .btn {
@@ -144,6 +175,21 @@ header {
   overflow: hidden;
   z-index: 1;
   transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    margin-right: 6px;
+  }
+  .btn:last-of-type {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .btn {
+    min-width: unset;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .btn:after {
   position: absolute;
@@ -182,6 +228,11 @@ header {
 
 .about_me {
   padding: 120px 0;
+}
+@media screen and (max-width: 768px) {
+  .about_me {
+    padding: 65px 0;
+  }
 }
 .about_me p {
   font-size: 16px;
@@ -225,10 +276,27 @@ header {
   opacity: 80%;
   margin: 0 auto 15px;
 }
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
 
 .services {
   background-color: #f6f6f6;
   padding: 120px 0;
+}
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 65px 0;
+  }
 }
 .services img {
   width: unset;
@@ -250,10 +318,20 @@ header {
 .skills {
   padding: 120px 0;
 }
+@media screen and (max-width: 768px) {
+  .skills {
+    padding: 65px 0;
+  }
+}
 
 .portfolio {
   padding: 120px 0;
   background-color: #f6f6f6;
+}
+@media screen and (max-width: 768px) {
+  .portfolio {
+    padding: 65px 0;
+  }
 }
 .portfolio .card {
   border: none;
@@ -276,9 +354,19 @@ header {
 .testimonials {
   padding: 120px 0;
 }
+@media screen and (max-width: 768px) {
+  .testimonials {
+    padding: 65px 0;
+  }
+}
 .testimonials .owl-carousel {
   padding: 100px 100px;
   border: 1px solid #212121;
+}
+@media screen and (max-width: 425px) {
+  .testimonials .owl-carousel {
+    padding: 60px 50px;
+  }
 }
 .testimonials .owl-carousel h3 {
   font-size: 30px;
@@ -286,6 +374,12 @@ header {
   color: #212121;
   margin-bottom: 0;
   font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .testimonials .owl-carousel h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 .testimonials .owl-carousel h4 {
   font-size: 12px;
@@ -295,6 +389,11 @@ header {
   margin-bottom: 15px;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .testimonials .owl-carousel h4 {
+    margin-bottom: 10px;
+  }
+}
 .testimonials .owl-carousel p {
   font-size: 16px;
   line-height: 26px;
@@ -302,6 +401,12 @@ header {
   opacity: 60%;
   text-transform: uppercase;
   margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .testimonials .owl-carousel p {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 .testimonials .owl-carousel .owl-dots {
   display: block;
@@ -324,6 +429,11 @@ header {
 
 .total {
   padding-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .total {
+    padding-bottom: 65px;
+  }
 }
 .total .services {
   padding: 53px 0 65px;
@@ -350,6 +460,11 @@ header {
 footer {
   padding: 120px 0 30px;
   background: url("../img/footer/footer_bg.jpg") center center/cover no-repeat;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 65px 0 30px;
+  }
 }
 footer .title {
   color: white;
@@ -418,6 +533,13 @@ footer .socials a {
   margin: 0 5px;
   line-height: 26px;
   transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  footer .socials a {
+    width: 25px;
+    height: 25px;
+    margin: 0 3px;
+  }
 }
 footer .socials a:first-child {
   margin: 0 5px 0 0;
