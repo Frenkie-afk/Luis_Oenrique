@@ -34,5 +34,22 @@ $(document).ready(function(){
         animateOut: "fadeOut" ,
     });
 
+    //smooth scroll and pageup
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        }   else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    var $page = $('html, body');
+    $('a[href*="#home"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 700);
+        return false;
+    });
+
     AOS.init();
 });

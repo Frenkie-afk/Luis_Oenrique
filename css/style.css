@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "../css/bootstrap-reboot.min.css";
 @import "../css/bootstrap-grid.min.css";
 @import "../css/bootstrap.min.css";
@@ -175,7 +176,7 @@ header {
   font-weight: 700;
   overflow: hidden;
   z-index: 1;
-  transition: 0.3s;
+  transition: 0.3s !important;
 }
 @media screen and (max-width: 768px) {
   .btn {
@@ -346,6 +347,29 @@ header {
 }
 .portfolio .card:hover img {
   opacity: 0.6;
+}
+.portfolio .card:hover a:after {
+  opacity: 1;
+}
+.portfolio .card a {
+  position: relative;
+}
+.portfolio .card a:after {
+  content: "";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  display: block;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  color: #4d4d4d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 55px;
+  opacity: 0;
+  transition: 0.3s;
 }
 .portfolio .btn.white {
   margin-right: 0;
@@ -547,6 +571,42 @@ footer .socials a:first-child {
 }
 footer .socials a:hover {
   background-color: #0084b4;
+  color: white;
+}
+
+.pageup {
+  position: fixed;
+  display: none;
+  height: 41px;
+  width: 41px;
+  background-color: white;
+  bottom: 193px;
+  right: 30px;
+  box-shadow: 0 0.5em 2em -0.4em rgba(0, 0, 0, 0.32);
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+@media screen and (max-width: 768px) {
+  .pageup {
+    bottom: 50px;
+  }
+}
+.pageup:before {
+  content: "";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  color: #4d4d4d;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.pageup:hover {
+  background-color: #0084b4;
+}
+.pageup:hover:before {
   color: white;
 }
 
