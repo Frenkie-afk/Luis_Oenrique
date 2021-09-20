@@ -6,9 +6,7 @@
 body {
   font-family: 'Asap', sans-serif;
 }
-.container {
-  overflow: hidden;
-}
+
 img {
   width: 100%;
   display: block;
@@ -214,6 +212,7 @@ header {
 
 .about_me {
   padding: 120px 0;
+  overflow: hidden;
   @include max-screen(768px) {
     padding: 65px 0;
   }
@@ -233,6 +232,9 @@ header {
     max-width: 570px;
     background-color: $grey_color;
     overflow: hidden;
+    @include max-screen(767px) {
+      margin-bottom: 20px;
+    }
   }
   .title {
     margin: 0;
@@ -341,6 +343,10 @@ header {
         line-height: 55px;
         opacity: 0;
         transition: .3s;
+        &:hover {
+          background-color: #0084b4;
+          color: $white_color;
+        }
       }
     }
   }
@@ -449,6 +455,7 @@ header {
 footer {
   padding: 120px 0 30px;
   background: url("../img/footer/footer_bg.jpg") center center/cover no-repeat;
+  overflow: hidden;
   @include max-screen(768px) {
     padding: 65px 0 30px;
   }
@@ -547,6 +554,7 @@ footer {
   box-shadow: 0 0.5em 2em -0.4em rgba(0, 0, 0, 0.32);
   text-decoration: none;
   transition: .3s background-color;
+  z-index: 3;
   @include max-screen(768px) {
     bottom: 50px;
   }
