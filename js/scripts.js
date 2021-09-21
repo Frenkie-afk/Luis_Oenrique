@@ -16,16 +16,7 @@ $(document).ready(function(){
                 dots:true,
                 nav: false
             },
-            425: {
-                items:1,
-                dots:true,
-                nav: false
-            },
-            768: {
-                items:1,
-                dots:true,
-                nav: false
-            },
+
             1000:{
                 items:1,
                 nav: false
@@ -43,12 +34,9 @@ $(document).ready(function(){
         }
     });
 
-    var $page = $('html, body');
-    $('a[href*="#home"]').click(function() {
-        $page.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 700);
-        return false;
+
+    $('a[href*="#"]').smoothscroll({
+        duration:  1000
     });
 
     AOS.init();
